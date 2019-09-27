@@ -31,6 +31,17 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face{
+
+font-family: "SegoeUI";
+
+src: url('./fonts/segoe-wp-light.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+}
+
 
 body {
   padding: 0;
@@ -168,8 +179,10 @@ body {
 .center-main-video-slides {
   width: 100%;
 
+  /* Question */
   background-image: url("./img/top-section-1.jpg");
   background-size: cover;
+
 }
 
 .video-slides {
@@ -177,8 +190,9 @@ body {
   box-sizing: border-box;
   width: 1300px;
 
-  background-image: url("./img/top-section-1.jpg");
-  background-repeat: no-repeat;
+  background-image: url("./img/pattern1.png"), url("./img/top-section-1.jpg");
+  background-size: 15px, 100%;
+  background-repeat: repeat, no-repeat;
 
   display: flex;
   justify-content: start;
@@ -230,12 +244,18 @@ body {
   z-index: 0;
 }
 
-.center-video-cover button{
+.video-slides button{
   display: none;
 }
 
-label[for="play-button-center"], label[for="play-button-mini"], .video-length {
+label[for="play-button-center"], label[for="play-button-mini"], label[for="volume-mute"], .video-length {
   position: absolute;
+}
+
+label[for="volume-mute"] {
+  right: 19px;
+
+  top: 285px;
 }
 
 label[for="play-button-center"] {
@@ -256,6 +276,10 @@ label[for='play-button-center'] img, label[for="play-button-mini"] img {
   margin: auto 27px;
 }
 
+label[for="play-button-mini"] img {
+  opacity: 0.37;
+}
+
 label[for="play-button-mini"] {
   width: 67px;
   height: 67px;
@@ -265,7 +289,7 @@ label[for="play-button-mini"] {
 
   display: flex;
 
-  background-color: rgba(245, 197, 6, 0.72);
+  background-color: rgba(245, 197, 6, 0.37);
 
   transform: scale(0.40);
 }
@@ -317,11 +341,104 @@ label[for="play-button-mini"] {
 }
 
 .slogan p:first-child {
-  padding-left: -15px;
+  padding-right: 16px;
 }
 
 .slogan p:last-child {
   color: rgb(255, 255, 255);
 
   padding-left: -10px;
+}
+
+.features-cover {
+  width: 100%;
+
+  background-image: url("./img/pattern2.png");
+  background-size: 5px;
+}
+
+.features {
+  margin: 0 auto;
+  padding: 0;
+
+  width: 1300px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0px 1px 5px rgba(0, 0, 0, 0.5),
+    0px -1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.features ul {
+  display: flex;
+  justify-content: flex-start;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.features ul li {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #d2d2d2;
+  border-top: 0px;
+  border-bottom: 0px;
+
+  font-size: 27px;
+  font-family: "SegoeUI";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.features p {
+  margin: 0;
+}
+
+.features li:first-child {
+  box-sizing: border-box;
+  margin-left: 139px;
+  padding-top: 60px;
+  padding-right: 5px;
+  padding-bottom: 34px;
+
+  width: 342px;
+}
+
+.features li:first-child p {
+  padding-top: 11px;
+  padding-left: 20px;
+
+}
+
+.features li:nth-child(2) {
+  box-sizing: border-box;
+
+  border: 0px;
+  width: 338px;
+
+  padding-top: 36px;
+  padding-left: 22px;
+}
+
+.features li:nth-child(2) p {
+  padding-top: 15px;
+}
+
+.features li:last-child {
+  box-sizing: border-box;
+  width: 339px;
+
+  padding-top: 53px;
+  padding-right: 18px;
+}
+
+.features li:last-child p {
+  padding-top: 10px;
+  padding-left: 2px;
 }

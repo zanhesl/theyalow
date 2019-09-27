@@ -37,9 +37,10 @@
   <main>
     <div class="center-main-video-slides">
       <section class="video-slides">
-        <div class="slide left">
+        <button type="button" name="slide-left" id="slide-left"></button>
+        <label for="slide-left" class="slide left">
           <img src="./img/slider-arrow.svg" alt="arrow">
-        </div>
+        </label>
         <div class="center-video-cover">
           <video class="video-slides-video" poster="./img/main-video.jpg">
             <source src="#">
@@ -52,6 +53,10 @@
           <label for="play-button-mini">
             <img src="./img/play-buton.svg" alt="play-button">
           </label>
+          <button type="button" name="volume-mute"></button>
+          <label for="volume-mute" class="volume">
+            <img src="./img/volume.svg" alt="arrow">
+          </label>
           <div class="video-length"></div>
           <div class="video-length-active"></div>
         </div>
@@ -59,24 +64,27 @@
           <p>The Cool</p>
           <p>The Minimal</p>
         </span>
-        <div class="slide right">
+        <button type="button" name="slide-right"></button>
+        <label for="slide-right" class="slide right">
           <img src="./img/slider-arrow.svg" alt="arrow">
-        </div>
+        </label>
       </section>
     </div>
-    <section class="features">
-      <ul>
-        <li><img src="./img/better-design.svg" alt="better-design">
-          <p>Better Design</p>
-        </li>
-        <li><img src="./img/customise.svg" alt="customize">
-          <p>Customize</p>
-        </li>
-        <li><img src="./img/its-free.svg" alt="free">
-          <p>Its Free</p>
-        </li>
-      </ul>
-    </section>
+    <div class="features-cover">
+      <section class="features">
+        <ul>
+          <li><img src="./img/better-design.svg" alt="better-design">
+            <p>Better Design</p>
+          </li>
+          <li><img src="./img/customise.svg" alt="customize">
+            <p>Customise</p>
+          </li>
+          <li><img src="./img/its-free.svg" alt="free">
+            <p>Its Free</p>
+          </li>
+        </ul>
+      </section>
+    </div>
     <section class="feed">
       <h2>Lorem ipsum dolor sit amet</h2>
       <section class="feed-content">
