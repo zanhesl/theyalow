@@ -42,6 +42,17 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face{
+
+font-family: "PT Sans";
+
+src: url('./fonts/pt-sans_[allfont.ru].ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+}
+
 
 body {
   padding: 0;
@@ -441,4 +452,107 @@ label[for="play-button-mini"] {
 .features li:last-child p {
   padding-top: 10px;
   padding-left: 2px;
+}
+
+.feed-cover {
+  width: 100%;
+  min-width: 1300px;
+
+  background-image: url("./img/pattern3.png");
+}
+
+.feed {
+  width: 1300px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feed h2 {
+  margin: 0;
+
+  margin-top: 36px;
+  margin-left: 140px;
+
+  font-size: 37px;
+  font-family: "PT Sans";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  word-spacing: 3px;
+}
+
+.feed button {
+  display: none;
+}
+
+.feed-content-description {
+  position: relative;
+
+  background-color: #ec9e03;
+
+  box-sizing: border-box;
+  width: 341px;
+
+  font-size: 29px;
+  font-family: "SegoeWP";
+  color: rgb(255, 255, 255);
+  line-height: 1.308;
+  text-align: left;
+
+  margin-left: 139px;
+  margin-top: 30px;
+
+  padding-top: 17px;
+  padding-left: 29px;
+  /* padding-bottom: 10px; */
+}
+
+.feed-content-description p {
+  padding: 0;
+  margin: 0;
+}
+
+label[for="plus-1"] {
+  position: absolute;
+
+  right: 15px;
+  top: 190px;
+}
+
+.feed-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  
+}
+
+.video-content {
+  margin-top: 32px;
+  position: relative;
+}
+
+label[for="feed-content-button"] {
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 100%;
+
+  background-color: rgba(245, 197, 6, 0.72);
+
+  display: flex;
+
+  top: 90px;
+  left: 130px;
+}
+
+label[for="feed-content-button"] img {
+  margin: auto;
 }
