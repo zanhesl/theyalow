@@ -6,7 +6,7 @@ src: url('./fonts/asap/Asap-Italic.otf') format('otf');
 
 font-weight: normal;
 
-font-style: italic;
+font-style: normal;
 }
 
 @font-face{
@@ -37,7 +37,13 @@ body {
   margin: 0;
 }
 
+.central {
+  width: 100%;
+}
+
 .central-content {
+  position: relative;
+
   box-sizing: border-box;
 
   margin: 0 auto;
@@ -49,6 +55,9 @@ body {
 }
 
 .main-header {
+  position: absolute;
+  width: 1020px;
+
   box-sizing: border-box;
 
   display: flex;
@@ -80,7 +89,7 @@ body {
   line-height: 1.2;
   text-align: center;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.42);
-
+  letter-spacing: 1px;
 }
 
 .logo-figure-big h2 {
@@ -116,13 +125,17 @@ body {
   display: flex;
 
   background-color: #f5c506;
+}
 
+.main-navigator li a{
   font-size: 17px;
   font-family: "SegoeWP";
   color: rgb(155, 125, 8);
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
+  text-decoration: none;
+  padding-left: 9px;
 }
 
 .main-navigator li:first-child {
@@ -150,4 +163,165 @@ body {
 .main-navigator p {
   margin: 0;
   margin-left: 9px;
+}
+
+.center-main-video-slides {
+  width: 100%;
+
+  background-image: url("./img/top-section-1.jpg");
+  background-size: cover;
+}
+
+.video-slides {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 1300px;
+
+  background-image: url("./img/top-section-1.jpg");
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: start;
+
+}
+
+.slide {
+  padding: 0;
+  margin: 0;
+
+  width: 32px;
+  height: 57px;
+
+  background-color: #f5c506;
+
+  display: flex;
+
+  margin-top: 300px;
+  margin-bottom: 210px;
+}
+
+.slide:hover,  .main-navigator li:hover{
+  background-color: #cca90b;
+}
+
+.slide img {
+  margin-top: 19px;
+  margin-bottom: 19px;
+  margin-right: 11px;
+  margin-left: 8px;
+}
+
+.right img {
+  transform: rotate(180deg);
+
+  margin-left: 11px;
+  margin-top: 17px;
+}
+
+.center-video-cover {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 168px;
+  margin-left: 118px;
+  margin-right: 50px;
+
+  z-index: 0;
+}
+
+.center-video-cover button{
+  display: none;
+}
+
+label[for="play-button-center"], label[for="play-button-mini"], .video-length {
+  position: absolute;
+}
+
+label[for="play-button-center"] {
+  width: 67px;
+  height: 67px;
+
+  top: 130px;
+  left: 241px;
+
+  display: flex;
+
+  border-radius: 100%;
+
+  background-color: rgba(245, 197, 6, 0.72);
+}
+
+label[for='play-button-center'] img, label[for="play-button-mini"] img {
+  margin: auto 27px;
+}
+
+label[for="play-button-mini"] {
+  width: 67px;
+  height: 67px;
+
+  top: 258px;
+  left: 9px;
+
+  display: flex;
+
+  background-color: rgba(245, 197, 6, 0.72);
+
+  transform: scale(0.40);
+}
+
+.video-length {
+  width: 404px;
+  height: 12px;
+
+  left: 80px;
+  top: 286px;
+
+  border-radius: 5px;
+
+  background-color: rgb(245, 197, 6);
+  opacity: 0.278;
+}
+
+.video-length-active {
+  width: 179px;
+  height: 12px;
+
+  left: 80px;
+  top: 286px;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  position: absolute;
+
+  background-color: #f5c507;
+}
+
+.slogan {
+
+  margin-top: 244px;
+  margin-right: 132px;
+
+}
+
+.slogan p {
+  margin: 0;
+
+  font-size: 63px;
+  font-family: "Asap";
+  text-transform: uppercase;
+  color: rgb(245, 197, 6);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.slogan p:first-child {
+  padding-left: -15px;
+}
+
+.slogan p:last-child {
+  color: rgb(255, 255, 255);
+
+  padding-left: -10px;
 }

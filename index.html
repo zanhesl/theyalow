@@ -9,118 +9,126 @@
 </head>
 
 <body>
-  <div class="central-content">
-    <header class="main-header">
-      <figure class="logo-figure-big">
-        <img src="./img/logo-big.svg" alt="site-logo">
-        <figcaption><h2>Theyalow</h2></figcaption>
-      </figure>
-      <nav class="main-navigator">
-        <ul>
-          <li><img src="./img/about-us.svg" alt="about-us">
-            <p>About us</p>
-          </li>
-          <li><img src="./img/services.svg" alt="services">
-            <p>Services</p>
-          </li>
-          <li><img src="./img/contact.svg" alt="contact">
-            <p>Contact</p>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <div class="central">
+    <div class="central-content">
+      <header class="main-header">
+        <figure class="logo-figure-big">
+          <img src="./img/logo-big.svg" alt="site-logo">
+          <figcaption>
+            <h2>Theyalow</h2>
+          </figcaption>
+        </figure>
+        <nav class="main-navigator">
+          <ul>
+            <li><img src="./img/about-us.svg" alt="about-us">
+              <a href="#" aria-label='About us'>About us</a>
+            </li>
+            <li><img src="./img/services.svg" alt="services">
+              <a href="#" aria-label="Services">Services</a>
+            </li>
+            <li><img src="./img/contact.svg" alt="contact">
+              <a href="#" aria-label="Contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
   </div>
-
-    <main>
+  <main>
+    <div class="center-main-video-slides">
       <section class="video-slides">
-        <div class="slide-left">
+        <div class="slide left">
           <img src="./img/slider-arrow.svg" alt="arrow">
         </div>
-        <video class="video-slides-video">
-          <source src="#">
-          <button type="button" name="play-button-center">
-            <img src="./img/play-button.svg" alt="play-button">
-          </button>
-          <button type="button" name="play-button-mini">
-            <img src="./img/play-button.svg" alt="play-button">
-          </button>
-          <div class="video-length">
-            <div class="video-length-active"></div>
-          </div>
-        </video>
+        <div class="center-video-cover">
+          <video class="video-slides-video" poster="./img/main-video.jpg">
+            <source src="#">
+          </video>
+          <button type="button" name="play-button-center" id="play-button-center"></button>
+          <label for="play-button-center">
+            <img src="./img/play-buton.svg" alt="play-button">
+          </label>
+          <button type="button" name="play-button-mini" id="play-button-mini"></button>
+          <label for="play-button-mini">
+            <img src="./img/play-buton.svg" alt="play-button">
+          </label>
+          <div class="video-length"></div>
+          <div class="video-length-active"></div>
+        </div>
         <span class="slogan">
           <p>The Cool</p>
           <p>The Minimal</p>
         </span>
-        <div class="slide-right">
+        <div class="slide right">
           <img src="./img/slider-arrow.svg" alt="arrow">
         </div>
       </section>
-      <section class="features">
-        <ul>
-          <li><img src="./img/better-design.svg" alt="better-design">
-            <p>Better Design</p>
-          </li>
-          <li><img src="./img/customise.svg" alt="customize">
-            <p>Customize</p>
-          </li>
-          <li><img src="./img/its-free.svg" alt="free">
-            <p>Its Free</p>
-          </li>
-        </ul>
-      </section>
-      <section class="feed">
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <section class="feed-content">
-          <div class="feed-content-description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut
-            </p>
-            <button type="button" name="plus-1">
-              <img src="./img/plus.svg" alt="plus-1-button">
-            </button>
-          </div>
-          <video class="feed-content-video">
-            <div class="feed-content-video-play">
-              <img src="./img/play-button.svg" alt="play-sign">
-            </div>
-          </video>
-        </section>
-        <section class="feed-social">
-          <span>22</span>
-          <img src="./img/twitter.svg" alt="social-twitter">
-          <button type="button" name="plus-2">
-            <img src="./img/plus.svg" alt="plus-2-button">
+    </div>
+    <section class="features">
+      <ul>
+        <li><img src="./img/better-design.svg" alt="better-design">
+          <p>Better Design</p>
+        </li>
+        <li><img src="./img/customise.svg" alt="customize">
+          <p>Customize</p>
+        </li>
+        <li><img src="./img/its-free.svg" alt="free">
+          <p>Its Free</p>
+        </li>
+      </ul>
+    </section>
+    <section class="feed">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <section class="feed-content">
+        <div class="feed-content-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut
+          </p>
+          <button type="button" name="plus-1">
+            <img src="./img/plus.svg" alt="plus-1-button">
           </button>
-        </section>
-        <section class="calendar">
-          <p>25</p>
-          <p>April</p>
-        </section>
-        <div class="slider-bar">
-          <div class="slidet-bar-cursor"></div>
         </div>
+        <video class="feed-content-video">
+          <div class="feed-content-video-play">
+            <img src="./img/play-button.svg" alt="play-sign">
+          </div>
+        </video>
       </section>
-      <section class="using-pros">
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <div class="fee-bubble">
-          <p>Its 100% Free</p>
-        </div>
-        <img src="./img/desktop.png" alt="desktop">
-        <img src="./img/tablet.png" alt="tablet">
-        <img src="./img/smartphone.png" alt="smartphone">
-        <ul class="using-pros-points">
-          <li>Sed ut perspiciatis unde omnis</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-          <li>Sed ut perspiciatis unde omnis</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-        </ul>
+      <section class="feed-social">
+        <span>22</span>
+        <img src="./img/twitter.svg" alt="social-twitter">
+        <button type="button" name="plus-2">
+          <img src="./img/plus.svg" alt="plus-2-button">
+        </button>
       </section>
-    </main>
-    <footer>
-      <img src="./img/logo-mini.svg" alt="logo-small">
-      <h3>Theyalow</h3>
-    </footer>
+      <section class="calendar">
+        <p>25</p>
+        <p>April</p>
+      </section>
+      <div class="slider-bar">
+        <div class="slidet-bar-cursor"></div>
+      </div>
+    </section>
+    <section class="using-pros">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <div class="fee-bubble">
+        <p>Its 100% Free</p>
+      </div>
+      <img src="./img/desktop.png" alt="desktop">
+      <img src="./img/tablet.png" alt="tablet">
+      <img src="./img/smartphone.png" alt="smartphone">
+      <ul class="using-pros-points">
+        <li>Sed ut perspiciatis unde omnis</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
+        <li>Sed ut perspiciatis unde omnis</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <img src="./img/logo-mini.svg" alt="logo-small">
+    <h3>Theyalow</h3>
+  </footer>
 </body>
 
 </html>
