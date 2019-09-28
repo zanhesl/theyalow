@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="./main.css">
-  <title></title>
+  <title>TheYallow</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
   <main>
     <div class="center-main-video-slides">
       <section class="video-slides">
-        <button type="button" name="slide-left" id="slide-left"></button>
+        <button class="visually-hidden" type="button" name="slide-left" id="slide-left"></button>
         <label for="slide-left" class="slide left">
           <img src="./img/slider-arrow.svg" alt="arrow">
         </label>
@@ -45,15 +45,15 @@
           <video class="video-slides-video" poster="./img/main-video.jpg">
             <source src="#">
           </video>
-          <button type="button" name="play-button-center" id="play-button-center"></button>
+          <button class="visually-hidden" type="button" name="play-button-center" id="play-button-center"></button>
           <label for="play-button-center">
             <img src="./img/play-buton.svg" alt="play-button">
           </label>
-          <button type="button" name="play-button-mini" id="play-button-mini"></button>
+          <button class="visually-hidden" type="button" name="play-button-mini" id="play-button-mini"></button>
           <label for="play-button-mini">
             <img src="./img/play-buton.svg" alt="play-button">
           </label>
-          <button type="button" name="volume-mute"></button>
+          <button class="visually-hidden" type="button" name="volume-mute"></button>
           <label for="volume-mute" class="volume">
             <img src="./img/volume.svg" alt="arrow">
           </label>
@@ -64,7 +64,7 @@
           <p>The Cool</p>
           <p>The Minimal</p>
         </span>
-        <button type="button" name="slide-right"></button>
+        <button class="visually-hidden" type="button" name="slide-right"></button>
         <label for="slide-right" class="slide right">
           <img src="./img/slider-arrow.svg" alt="arrow">
         </label>
@@ -94,7 +94,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut
               </p>
-              <button type="button" name="plus-1" id="plus-1"></button>
+              <button class="visually-hidden" type="button" name="plus-1" id="plus-1"></button>
               <label for="plus-1">
                 <img src="./img/plus.svg" alt="plus-1-button">
               </label>
@@ -103,49 +103,56 @@
               <video class="feed-content-video" poster="./img/mid-section-video.jpg">
                 <source src="#" type="video/">
               </video>
-              <button type="button" name="feed-content-button" id="feed-content-button"></button>
+              <button class="visually-hidden" type="button" name="feed-content-button" id="feed-content-button"></button>
               <label for="feed-content-button">
                 <img src="./img/play-buton.svg" alt="play-sign">
               </label>
+            </div>
+            <div class="calendar">
+              <p>25</p>
+              <p>April</p>
             </div>
           </section>
           <section class="feed-social">
             <span>22</span>
             <img src="./img/twitter.svg" alt="social-twitter">
-            <button type="button" name="plus-2" id="plus-2"></button>
+            <button class="visually-hidden" type="button" name="plus-2" id="plus-2"></button>
             <label for="plus-2">
               <img src="./img/plus.svg" alt="plus-2-button">
             </label>
           </section>
-          <section class="calendar">
-            <p>25</p>
-            <p>April</p>
-          </section>
         </div>
-        <div class="slider-bar"></div>
-        <div class="slidet-bar-cursor"></div>
+        <input type="range" class="slider-bar" name="slider-bar" value="">
       </section>
     </div>
-    <section class="using-pros">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <div class="fee-bubble">
-        <p>Its 100% Free</p>
-      </div>
-      <img src="./img/desktop.png" alt="desktop">
-      <img src="./img/tablet.png" alt="tablet">
-      <img src="./img/smartphone.png" alt="smartphone">
-      <ul class="using-pros-points">
-        <li>Sed ut perspiciatis unde omnis</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-        <li>Sed ut perspiciatis unde omnis</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-      </ul>
-    </section>
+    <div class="using-pros-cover">
+      <section class="using-pros">
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <div class="using-pros-content">
+          <div class="device-images">
+            <div class="free-bubble">
+              <p>Its 100% Free</p>
+            </div>
+            <img src="./img/desktop.png" alt="desktop">
+            <img src="./img/tablet.png" alt="tablet">
+            <img src="./img/smartphone.png" alt="smartphone">
+          </div>
+          <ul class="using-pros-points">
+            <li>Sed ut perspiciatis unde omnis</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
+            <li>Sed ut perspiciatis unde omnis</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer>
-    <img src="./img/logo-mini.svg" alt="logo-small">
-    <h3>Theyalow</h3>
-  </footer>
+  <div class="footer-cover">
+    <footer class="main-footer">
+      <img src="./img/logo-mini.svg" alt="logo-small">
+      <h3>Theyalow</h3>
+    </footer>
+  </div>
 </body>
 
 </html>

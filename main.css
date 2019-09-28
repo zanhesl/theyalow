@@ -28,7 +28,7 @@ src: url('./fonts/lucida-sans-unicode_allfont_ru.ttf') format('truetype');
 
 font-weight: normal;
 
-font-style: normal;
+font-style: italic;
 }
 
 @font-face{
@@ -44,6 +44,17 @@ font-style: normal;
 
 @font-face{
 
+font-family: "SegoeUI";
+
+src: url('./fonts/SegoeUi_bold.ttf') format('truetype');
+
+font-weight: bold;
+
+font-style: normal;
+}
+
+@font-face{
+
 font-family: "PT Sans";
 
 src: url('./fonts/pt-sans_[allfont.ru].ttf') format('truetype');
@@ -53,10 +64,58 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face{
+
+font-family: "SegoeWp";
+
+src: url('./fonts/ofont.ru_SegoeWP.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+}
+
+@font-face{
+
+font-family: "PT Sans Narrow";
+
+src: url('./fonts/PTSansNarrow.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+}
+
+@font-face{
+
+font-family: "PT Sans Narrow";
+
+src: url('./fonts/PTSansNarrow_Bold.ttf') format('truetype');
+
+font-weight: bold;
+
+font-style: normal;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
 
 body {
   padding: 0;
   margin: 0;
+}
+
+label {
+	cursor: pointer;
 }
 
 .central {
@@ -84,6 +143,8 @@ body {
 
   display: flex;
   justify-content: space-between;
+
+	top: 8px;
 }
 
 .logo-figure-big {
@@ -106,7 +167,7 @@ body {
   font-size: 27px;
   font-family: "Lucida Sans";
   color: rgb(255, 255, 255);
-  font-style: normal;
+  font-style: italic;
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
@@ -190,19 +251,19 @@ body {
 .center-main-video-slides {
   width: 100%;
 
-  /* Question */
   background-image: url("./img/top-section-1.jpg");
   background-size: cover;
-
 }
 
 .video-slides {
   margin: 0 auto;
+	padding-top: 8px;
+
   box-sizing: border-box;
   width: 1300px;
 
   background-image: url("./img/pattern1.png"), url("./img/top-section-1.jpg");
-  background-size: 15px, 100%;
+  background-size: 15px, cover;
   background-repeat: repeat, no-repeat;
 
   display: flex;
@@ -255,9 +316,6 @@ body {
   z-index: 0;
 }
 
-.video-slides button{
-  display: none;
-}
 
 label[for="play-button-center"], label[for="play-button-mini"], label[for="volume-mute"], .video-length {
   position: absolute;
@@ -377,7 +435,6 @@ label[for="play-button-mini"] {
   box-sizing: border-box;
 
   box-shadow:
-    0px 1px 5px rgba(0, 0, 0, 0.5),
     0px -1px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -459,6 +516,8 @@ label[for="play-button-mini"] {
   min-width: 1300px;
 
   background-image: url("./img/pattern3.png");
+
+	box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .feed {
@@ -469,6 +528,10 @@ label[for="play-button-mini"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  padding-bottom: 161px;
+
+  position: relative;
 }
 
 .feed h2 {
@@ -486,9 +549,6 @@ label[for="play-button-mini"] {
   word-spacing: 3px;
 }
 
-.feed button {
-  display: none;
-}
 
 .feed-content-description {
   position: relative;
@@ -499,17 +559,20 @@ label[for="play-button-mini"] {
   width: 341px;
 
   font-size: 29px;
-  font-family: "SegoeWP";
+  font-family: "SegoeUI";
   color: rgb(255, 255, 255);
   line-height: 1.308;
   text-align: left;
+	letter-spacing: 1px;
+	word-spacing: -3px;
 
   margin-left: 139px;
   margin-top: 30px;
+  margin-bottom: 3px;
 
   padding-top: 17px;
   padding-left: 29px;
-  /* padding-bottom: 10px; */
+
 }
 
 .feed-content-description p {
@@ -520,7 +583,7 @@ label[for="play-button-mini"] {
 label[for="plus-1"] {
   position: absolute;
 
-  right: 15px;
+  right: 14px;
   top: 190px;
 }
 
@@ -529,11 +592,54 @@ label[for="plus-1"] {
   flex-direction: row;
   justify-content: flex-start;
 
-  
+  position: relative;
+}
+
+.calendar {
+  position: absolute;
+
+  height: 87px;
+  width: 112px;
+
+  background-color: #ddb101;
+
+  top: 263px;
+  left: 139px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar p {
+  padding: 0;
+  margin: 0;
+}
+
+.calendar p:first-child {
+  font-size: 51px;
+  font-family: "SegoeUI";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 0.744;
+  text-align: left;
+
+  margin-top: 13px;
+  margin-left: 30px;
+}
+
+.calendar p:last-child {
+  font-size: 21px;
+  font-family: "SegoeWP", serif;
+  color: rgb(178, 101, 41);
+  line-height: 1.805;
+  text-align: left;
+  text-transform: uppercase;
+
+  margin-left: 32px;
 }
 
 .video-content {
-  margin-top: 32px;
+  margin-top: 30px;
   position: relative;
 }
 
@@ -549,10 +655,248 @@ label[for="feed-content-button"] {
 
   display: flex;
 
-  top: 90px;
-  left: 130px;
+  top: 93px;
+  left: 131px;
 }
 
 label[for="feed-content-button"] img {
   margin: auto;
+  margin-left: 24px;
+}
+
+.feed-social {
+  background-color: #ec9e03;
+
+  box-sizing: border-box;
+
+  margin-left: 34px;
+  margin-top: 30px;
+  margin-bottom: 3px;
+
+  font-size: 25px;
+  font-family: "SegoeUI";
+  color: rgb(255, 255, 255);
+  line-height: 1.517;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.feed-social span {
+  position: absolute;
+
+  top: 9px;
+  right: 18px;
+}
+
+.feed-social img {
+  margin-top: 59px;
+  margin-right: 83px;
+  margin-left: 83px;
+}
+
+label[for="plus-2"] {
+  position: absolute;
+
+  top: 150px;
+  right: -74px;
+}
+.Rounded_Rectangle_2 {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.478;
+  position: absolute;
+  left: 213px;
+  top: 1250px;
+  width: 896px;
+  height: 15px;
+  z-index: 52;
+}
+
+.slider-bar {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.478;
+
+  width: 896px;
+  height: 15px;
+
+  position: absolute;
+
+  bottom: 23px;
+  left: 214px;
+}
+
+.using-pros-cover {
+	width: 100%;
+
+	background-color: #4c4c4c;
+}
+
+.using-pros {
+	background-color: #4c4c4c;
+	background-image: url("./img/pattern4.png");
+	background-size: 10px;
+
+	width: 1300px;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-bottom: 99px;
+}
+
+.using-pros h2 {
+	margin: 0;
+
+	font-size: 43px;
+  font-family: "PT Sans";
+  color: rgb(245, 197, 6);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+	word-spacing: 2px;
+
+	margin-left: 351px;
+	margin-top: 41px;
+}
+
+.using-pros-points {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	font-size: 22px;
+  font-family: "Open Sans";
+  color: rgb(169, 169, 167);
+  line-height: 1.2;
+  text-align: left;
+	word-spacing: 1px;
+}
+
+.device-images {
+	position: relative;
+
+	padding-left: 158px;
+	padding-top: 45px;
+
+	width: 620px;
+}
+
+.free-bubble {
+	position: absolute;
+
+	width: 116px;
+	height: 116px;
+
+	top: 2px;
+	left: 137px;
+
+	border-radius: 100%;
+
+	background-color: #f5c506;
+
+	display: flex;
+}
+
+.free-bubble p {
+	margin: auto;
+
+	font-size: 19px;
+  font-family: "PT Sans Narrow";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+
+	margin-top: 50px;
+	margin-left: 7px;
+}
+img[alt="tablet"] {
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+
+img[alt="smartphone"] {
+	margin-left: 21px;
+	margin-bottom: 40px;
+}
+
+.using-pros-content {
+	display: flex;
+}
+
+.using-pros-points {
+	margin-left: 85px;
+	margin-top: 89px;
+}
+
+.using-pros-points li {
+	position: relative;
+}
+
+.using-pros-points li:nth-child(2) {
+	margin-top: 23px;
+}
+
+.using-pros-points li:nth-child(3) {
+	margin-top: 14px;
+}
+
+.using-pros-points li:nth-child(4) {
+	margin-top: 24px;
+}
+
+.using-pros-points li::before {
+	position: absolute;
+	content: "";
+
+	top: 7px;
+	left: -33px;
+
+	width: 14px;
+	height: 14px;
+
+	border-radius: 100%;
+
+	background-color: #f5c506;
+}
+
+.footer-cover {
+	width: 100%;
+	background-color: #4c4c4c;
+}
+
+.main-footer {
+	width: 1300px;
+
+	background-color: #4c4c4c;
+
+	display: flex;
+	justify-content: flex-start;
+
+	font-size: 26px;
+  font-family: "Lucida Sans";
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.42);
+
+	padding-top: 5px;
+	padding-left: 140px;
+	padding-bottom: 5px;
+
+	box-shadow: 0px -1px 5px rgba(0, 0, 0, 1);
+}
+
+.main-footer h3 {
+	margin: 0;
+
+	margin-top: 11px;
+	margin-left: 5px;
 }
