@@ -2,7 +2,7 @@
 
 font-family: "Asap";
 
-src: url('./fonts/asap/Asap-Italic.otf') format('otf');
+src: url('./fonts/Asap-Regular.ttf') format('truetype');
 
 font-weight: normal;
 
@@ -97,6 +97,18 @@ font-weight: bold;
 font-style: normal;
 }
 
+@font-face{
+
+font-family: "Open Sans";
+
+src: url('./fonts/OpenSans-Regular.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+}
+
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -131,7 +143,6 @@ label {
   padding: 0;
   padding-left: 140px;
   padding-right: 140px;
-
   width: 1300px;
 }
 
@@ -143,8 +154,6 @@ label {
 
   display: flex;
   justify-content: space-between;
-
-	top: 8px;
 }
 
 .logo-figure-big {
@@ -257,7 +266,6 @@ label {
 
 .video-slides {
   margin: 0 auto;
-	padding-top: 8px;
 
   box-sizing: border-box;
   width: 1300px;
