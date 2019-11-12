@@ -772,6 +772,7 @@ label[for="plus-2"] {
 	background-image: url("./img/pattern4.png");
 	background-size: 10px;
 
+	margin: auto;
 	width: 1300px;
 
 	display: flex;
@@ -905,6 +906,8 @@ img[alt="smartphone"] {
 
 .main-footer {
 	width: 1300px;
+
+	margin: auto;
 
 	box-sizing: border-box;
 
